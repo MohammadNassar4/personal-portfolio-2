@@ -118,11 +118,11 @@ function updateCarousel() {
   if (carouselCounter === 0) {
     carousel.style.transform = "translateX(0%)";
   } else if (carouselCounter === 1) {
-    carousel.style.transform = "translateX(33.333333333%)";
+    carousel.style.transform = `translateX(${window.innerWidth < 640 ? "100" : window.innerWidth < 1024 ? "50" : "33.333333333"}%)`;
   } else if (carouselCounter === 2) {
-    carousel.style.transform = "translateX(66.666666666%)";
+    carousel.style.transform = `translateX(${window.innerWidth < 640 ? "200" : window.innerWidth < 1024 ? "100" : "66.666666666"}%)`;
   } else if (carouselCounter === 3) {
-    carousel.style.transform = "translateX(100%)";
+    carousel.style.transform = `translateX(${window.innerWidth < 640 ? "300" : window.innerWidth < 1024 ? "150" : "100"}%)`;
   }
 }
 
